@@ -11,8 +11,14 @@ export const TodoList = ({
   return (
     <ol>
       {todos.map((item) => (
-        <li key={item.id} onClick={() => markItemAsDone(item)}>
-          {item.content}
+        <li key={item.id}>
+          <span>{item.content}</span>
+          <span
+            onClick={() => markItemAsDone(item)}
+            className="material-symbols-outlined"
+          >
+            check_circle
+          </span>
         </li>
       ))}
     </ol>

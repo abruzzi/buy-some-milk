@@ -1,13 +1,55 @@
-body {
+*, *::before, *::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
+}
+
+.container {
+  width: 480px;
+  margin: 4rem auto;
+}
+
+.todoInputBox {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+}
+
+ol {
+  margin-top: 1rem;
+}
+
+ol li {
+  list-style: none;
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  border-left: 4px solid deepskyblue;
+  padding: 0.4rem 0 0.4rem 0.4rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  background-color: #fff;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+li span:last-child {
+  margin-left: auto;
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+
+ol li.urgent {
+  border-left: 4px solid orangered;
 }

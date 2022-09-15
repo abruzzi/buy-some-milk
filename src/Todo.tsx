@@ -12,7 +12,7 @@ export const Todo = ({ items }: { items: TodoItem[] }) => {
   const {todos, addTodoItem, markItemAsDone} = useTodo(items)
   
   return (
-    <div>
+    <div className="container">
       <TodoInput onItemAdded={addTodoItem} />
       <TodoList todos={todos} markItemAsDone={markItemAsDone} />
     </div>

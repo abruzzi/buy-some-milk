@@ -22,10 +22,13 @@ export const TodoInput = ({
 
   return (
     <input
+      className="todoInputBox"
       type="text"
       data-testid="input"
+      value={todo}
       onChange={handleChange}
       onKeyDown={handleKeyDown}
+      placeholder="Buy some milk."
     />
   );
 };
